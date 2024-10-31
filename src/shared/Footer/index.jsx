@@ -4,40 +4,35 @@ import {NavLink} from 'react-router-dom';
 import logo from 'assets/images/logo.svg';
 //utils
 import {ROUTER_URL} from 'utils/router-url';
+import dayjs from 'dayjs';
 //styles
 import styles from './styles.module.scss';
 
-const Header = () => {
+const Footer = () => {
 	return (
 		<div className={styles.wrapper}>
-			<NavLink to={ROUTER_URL.CALENDAR}>
+			<NavLink to={ROUTER_URL.CALENDAR} className={styles.logo}>
 				<img src={logo} alt="logo" />
 			</NavLink>
 
 			<ul className={styles.navigation}>
 				<li className={styles['navigation-item']}>
-					<NavLink to={ROUTER_URL.MAIN} className={({isActive}) => isActive && styles['active-link']}>
-						Main
-					</NavLink>
+					<NavLink to={ROUTER_URL.MAIN}>Main</NavLink>
 				</li>
 				<li className={styles['navigation-item']}>
-					<NavLink to={ROUTER_URL.EVENTS} className={({isActive}) => isActive && styles['active-link']}>
-						Events
-					</NavLink>
+					<NavLink to={ROUTER_URL.EVENTS}>Events</NavLink>
 				</li>
 				<li className={styles['navigation-item']}>
-					<NavLink to={ROUTER_URL.CALENDAR} className={({isActive}) => isActive && styles['active-link']}>
-						Calendar
-					</NavLink>
+					<NavLink to={ROUTER_URL.CALENDAR}>Calendar</NavLink>
 				</li>
 				<li className={styles['navigation-item']}>
-					<NavLink to={ROUTER_URL.FAQ} className={({isActive}) => isActive && styles['active-link']}>
-						FAQ
-					</NavLink>
+					<NavLink to={ROUTER_URL.FAQ}>FAQ</NavLink>
 				</li>
 			</ul>
+
+			<p className={styles.rights}>© {dayjs().format('YYYY')} All rights reserved</p>
 		</div>
 	);
 };
 
-export default Header;
+export default Footer;

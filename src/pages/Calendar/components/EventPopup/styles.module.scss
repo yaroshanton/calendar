@@ -1,0 +1,105 @@
+.wrapper {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 350px;
+	width: 100%;
+	padding: 1rem;
+	background-color: var(--secondary-black);
+	color: var(--primary-white);
+	border-radius: 8px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+	z-index: 1000;
+	text-align: left;
+
+	.title {
+		color: var(--primary-white);
+		font-size: 32px;
+		font-weight: 200;
+		border-bottom: var(--primary-border);
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+
+	.event-details {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		padding-bottom: 20px;
+		margin-bottom: 14px;
+
+		&:not(:last-child) {
+			border-bottom: var(--primary-border);
+		}
+
+		.description {
+			& > div {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 14px;
+
+				& h3 {
+					font-size: 20px;
+					font-weight: 500;
+				}
+				& img {
+					cursor: pointer;
+				}
+			}
+
+			& p {
+				font-size: 14px;
+				line-height: 20px;
+				font-weight: 200;
+			}
+		}
+
+		.location {
+			font-size: 16px;
+			color: var(--primary-grey);
+			font-weight: 400;
+		}
+
+		.info {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.time {
+				font-size: 14px;
+				color: var(--primary-red);
+				font-weight: 200;
+				text-transform: lowercase;
+			}
+
+			.type {
+				font-size: 14px;
+				padding: 4px 14px;
+				border-radius: 16px;
+				font-weight: 400;
+
+				&.meeting {
+					color: var(--primary-red);
+					background-color: var(--secondary-red);
+				}
+
+				&.qa {
+					color: var(--primary-green);
+					background-color: var(--secondary-green);
+				}
+
+				&.conference {
+					color: var(--primary-orange);
+					background-color: var(--secondary-orange);
+				}
+
+				&.webinar {
+					color: var(--primary-blue);
+					background-color: var(--secondary-blue);
+				}
+			}
+		}
+	}
+}

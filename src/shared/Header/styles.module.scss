@@ -1,11 +1,11 @@
 .wrapper {
 	max-width: 1128px;
-	margin: 20px auto;
+	margin: 0 auto 20px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding-bottom: 20px;
-	border-bottom: 1px solid var(--secondary-red);
+	border-bottom: var(--primary-border);
 }
 
 .navigation {
@@ -13,18 +13,18 @@
 	list-style: none;
 	gap: 60px;
 	font-size: 20px;
-	font-weight: 250;
+	font-weight: 200;
 	margin-left: 20px;
 }
 
-.navigationItem {
+.navigation-item {
 	a {
 		color: #fff;
 		text-decoration: none;
 	}
 }
 
-.activeLink {
+.active-link {
 	padding-bottom: 18px;
 	border-bottom: 1px solid var(--primary-red);
 }

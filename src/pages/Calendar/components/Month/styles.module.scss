@@ -1,0 +1,79 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	h3 {
+		text-align: start;
+		color: var(--primary-white);
+		font-weight: 200;
+		font-size: 32px;
+		margin-bottom: 20px;
+	}
+
+	.days {
+		padding-left: 4px;
+		&-of-week {
+			display: grid;
+			grid-template-columns: repeat(7, 1fr);
+			margin-bottom: 0.5rem;
+
+			.day-header {
+				color: var(--primary-grey);
+				font-weight: 300;
+			}
+		}
+
+		&-grid {
+			display: grid;
+			grid-template-columns: repeat(7, 1fr);
+			gap: 0.5rem;
+		}
+	}
+
+	.day {
+		position: relative;
+		font-weight: 300;
+		cursor: pointer;
+		padding: 0.5rem;
+		height: 40px;
+		width: 40px;
+		border-radius: 4px;
+		color: #fff;
+		text-align: center;
+
+		&.other-month {
+			color: var(--primary-grey);
+			background-color: unset;
+			cursor: default;
+		}
+
+		.event-dots {
+			position: absolute;
+			top: 30px;
+			display: flex;
+			left: 50%;
+			transform: translate(-50%, 0);
+
+			.dot {
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				margin: 0 2px;
+
+				&.meeting {
+					background-color: #e74c3c;
+				}
+				&.qa {
+					background-color: #27ae60;
+				}
+				&.conference {
+					background-color: #f1c40f;
+				}
+				&.webinar {
+					background-color: #3498db;
+				}
+			}
+		}
+	}
+}
